@@ -1,4 +1,4 @@
-aem6-cookbook
+aem-cookbook
 =============
 
-aem / cq (version 6) cookbook
+aem / cq  cookbook
