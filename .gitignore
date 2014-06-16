@@ -20,6 +20,8 @@ build/
 /doc/
 /rdoc/
 
+*.lock
+
 ## Environment normalisation:
 /.bundle/
 /lib/bundler/man/

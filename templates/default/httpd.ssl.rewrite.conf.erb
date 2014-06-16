@@ -1,0 +1,18 @@
+#
+# partial template for ssl rewrite rule
+#
+RewriteEngine On
+RewriteLogLevel 8
+RewriteLog <%= node['apache']['ssl_rewrite_log_file_path']%>
+
+# This page must be on http
+
+#RewriteCond %{SERVER_PORT} ^443$ 
+RewriteCond %{HTTPS} on
+RewriteCond %{REQUEST_URI} /content/install/download2.html
+RewriteRule ^(.*)$ http://<%= node['apache']['servername'] %>/content/install/d3.html [R,L]
+
+RewriteCond %{HTTPS} =on
+RewriteCond %{REQUEST_URI} /content/install/download3.html
+RewriteRule ^(.*)$ http://<%= node['apache']['servername'] %>/content/install/d3.html [R,L]
+
